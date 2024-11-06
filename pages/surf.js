@@ -1,23 +1,4 @@
-import { useRouter } from "next/router";
-import { useState } from "react";
-
-export default function Surf() {
-    const [url, setURL] = useState("");
-    const router = useRouter();
-
-    const handle = (e) => {
-        e.preventDefault();
-
-        const browse = !url.startsWith("http") ? `https://${url}` : url;
-
-        try {
-            new URL(browse);
-        } catch {
-            return alert(url.length ? "Invalid url!" : "Enter a url!");
-        }
-
-        e.target.reset();
-        router.push(`/browse/${browse.toString()}`);
+router.push(`/browse/${browse.toString()}`);
     }
 
     return (
