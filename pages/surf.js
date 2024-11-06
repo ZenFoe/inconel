@@ -17,7 +17,7 @@ export default function Surf() {
         }
 
         e.target.reset();
-router.push(`/browse/${browse.toString()}`);
+        router.push(`/browse/${browse.toString()}`);
     }
 
     return (
